@@ -1,0 +1,80 @@
+[
+  {
+    "ContainingType": "InfotecsTestWebApi.Controllers.FilesController",
+    "Method": "Upload",
+    "RelativePath": "api/files/upload",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "File",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "InfotecsTestWebApi.Controllers.ResultsController",
+    "Method": "GetResults",
+    "RelativePath": "api/results",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "FileName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "MinDateFrom",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "MinDateTo",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "AvgValueFrom",
+        "Type": "System.Nullable\u00601[[System.Double, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "AvgValueTo",
+        "Type": "System.Nullable\u00601[[System.Double, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "AvgTimeFrom",
+        "Type": "System.Nullable\u00601[[System.Double, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "AvgTimeTo",
+        "Type": "System.Nullable\u00601[[System.Double, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "InfotecsTestWebApi.Controllers.ValuesController",
+    "Method": "GetLastValues",
+    "RelativePath": "api/values/last",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "fileName",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

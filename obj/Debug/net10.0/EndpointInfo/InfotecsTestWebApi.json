@@ -1,0 +1,143 @@
+{
+  "openapi": "3.0.4",
+  "info": {
+    "title": "InfotecsTestWebApi",
+    "version": "1.0"
+  },
+  "paths": {
+    "/api/files/upload": {
+      "post": {
+        "tags": [
+          "Files"
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "File": {
+                    "type": "string",
+                    "format": "binary"
+                  }
+                }
+              },
+              "encoding": {
+                "File": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/results": {
+      "get": {
+        "tags": [
+          "Results"
+        ],
+        "parameters": [
+          {
+            "name": "FileName",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MinDateFrom",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "MinDateTo",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "AvgValueFrom",
+            "in": "query",
+            "schema": {
+              "type": "number",
+              "format": "double"
+            }
+          },
+          {
+            "name": "AvgValueTo",
+            "in": "query",
+            "schema": {
+              "type": "number",
+              "format": "double"
+            }
+          },
+          {
+            "name": "AvgTimeFrom",
+            "in": "query",
+            "schema": {
+              "type": "number",
+              "format": "double"
+            }
+          },
+          {
+            "name": "AvgTimeTo",
+            "in": "query",
+            "schema": {
+              "type": "number",
+              "format": "double"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/values/last": {
+      "get": {
+        "tags": [
+          "Values"
+        ],
+        "parameters": [
+          {
+            "name": "fileName",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "components": { },
+  "tags": [
+    {
+      "name": "Files"
+    },
+    {
+      "name": "Results"
+    },
+    {
+      "name": "Values"
+    }
+  ]
+}
